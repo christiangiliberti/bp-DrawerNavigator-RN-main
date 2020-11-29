@@ -14,7 +14,7 @@ setLogin(){
     this.setState({isLoggedIn:true});
 }
 
-setLogout=()=>{
+setLogout = () => {
     this.setState({isLoggedIn:false});
 }
 
@@ -23,7 +23,7 @@ setLogout=()=>{
          if(this.state.isLoggedIn){
         screen = (
          <NavigationContainer>
-           <DrawerCustomNavigator onLogout={() => this.setLogout()}/>
+           <DrawerCustomNavigator onLogout={this.setLogout}/>
          </NavigationContainer>
        )
     } else {
