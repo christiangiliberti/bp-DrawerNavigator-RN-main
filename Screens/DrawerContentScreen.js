@@ -11,8 +11,8 @@ export class DrawerContentScreen extends Component {
     }
 
     handlerLogout=()=>{
-        console.log("Logout");
-        //this.props.OnHandlerLogout();
+        //console.log("Logoutdrawer");
+        this.props.onLogout();
     }
 
     render(){
@@ -28,7 +28,7 @@ export class DrawerContentScreen extends Component {
                         />
                         <DrawerItem 
                             icon={() => <Icon type="material-community" name="calendar" style={styles.icon}/>}
-                            label="Frases"
+                            label="Info"
                             onPress={() => this.props.navigation.navigate("Info")}
                         />
                     </View>

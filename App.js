@@ -14,7 +14,7 @@ setLogin(){
     this.setState({isLoggedIn:true});
 }
 
-setLogout(){
+setLogout=()=>{
     this.setState({isLoggedIn:false});
 }
 
@@ -42,3 +42,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+

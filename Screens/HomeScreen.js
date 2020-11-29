@@ -27,8 +27,8 @@ export class HomeScreen extends Component {
         this.setState({nombre: text});
       }
       
-      handlerLogout(){
-        console.log("Logout");
+      handlerLogout=()=>{
+        console.log("Logouthome");
         //this.props.onLogout();
       }
 
@@ -72,10 +72,7 @@ export class HomeScreen extends Component {
               keyExtractor={(item) => item.char_id}
             />
           </SafeAreaView>
-          <Button
-                    onPress={() => this.handlerLogout()}
-                    title="Cerrar sesión"
-          />
+
           </>
         );
     }
