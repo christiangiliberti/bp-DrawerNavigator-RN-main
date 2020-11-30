@@ -35,10 +35,10 @@ export class HomeScreen extends Component {
     render(){
         const Item = ({ item, onPress, style }) => (
             <>
-            <Text>Nombre: {item.name}</Text>
-            <Text>Sobrenombre: {item.nickname}</Text>
-            <Text>Cumple: {item.birthday}</Text>
-            <Text>Estado: {item.status}</Text>
+            <Text style={styles.text}>Nombre: {item.name}</Text>
+            <Text style={styles.text}>Sobrenombre: {item.nickname}</Text>
+            <Text style={styles.text}>Cumple: {item.birthday}</Text>
+            <Text style={styles.text}>Estado: {item.status}</Text>
             <Image style={styles.tinyLogo} source={{uri: item.img}}/>
             </>
         );
@@ -52,17 +52,20 @@ export class HomeScreen extends Component {
         return(
             <>
             <View style={styles.container}>
-             
+            <Image source={require('../img/brakingbad.jpg')} style={styles.mainImage}/>  
+            <SafeAreaView style={styles.container}>
             <TextInput
             style={{ height: 40, borderColor: 'gray', borderWidth: 1,width:200 }}
             onChangeText={text => this.handlerText(text)}  
             />
+
             <Button
               onPress={this.handlerBtn.bind(this)}
               title="Buscar Personaje "
               color="#006400"
               accessibilityLabel="Learn more about this purple button"
             />
+            </SafeAreaView>
           </View>
           
           <SafeAreaView style={styles.container}>
@@ -91,4 +94,14 @@ const styles = StyleSheet.create({
       width: 200,
       height: 400,
     },
+        mainImage:{
+      width: 400,
+      height: 110,
+    },
+    text:{
+      color: "black",
+      fontSize: 15,
+      fontWeight: "bold",
+      textAlign:"center",
+    }
   });

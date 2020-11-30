@@ -28,7 +28,7 @@ export class DrawerContentScreen extends Component {
                         />
                         <DrawerItem 
                             icon={() => <Icon type="material-community" name="calendar" style={styles.icon}/>}
-                            label="Info"
+                            label="Frases"
                             onPress={() => this.props.navigation.navigate("Info")}
                         />
                     </View>

@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Button} from 'react-native';
+import {StyleSheet, Text, View, Button, Image, SafeAreaView} from 'react-native';
 
 import * as Google from 'expo-google-app-auth'
 
@@ -34,10 +34,16 @@ export default class LoginScreen extends Component{
     render(){
         return (
             <View style={styles.container}>
+                <SafeAreaView style={styles.container}>
+                <Image source={require('../img/logo2.png')} style={styles.mainImage}/>
+                </SafeAreaView>
+                <SafeAreaView style={styles.container}>
                 <Button
                     onPress={() => this._signInWithGoogle()}
                     title="Iniciar sesión con Google"
+                    color="#006400"
                 />
+                </SafeAreaView>
             </View>
 
         );
@@ -52,6 +58,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    mainImage:{
+        width: 200,
+        height: 120,
+      }
 });
 
 /*

@@ -32,12 +32,14 @@ export class InfoScreen extends Component {
     render(){
         const Item = ({ item, onPress, style }) => (
             <>
-            <Text>Titulo:</Text>
-            <Text> {item.quote}</Text>
-            <Text>Temporada:</Text>
-            <Text> {item.author}</Text>
-            <Text>Serie:</Text>
-            <Text> {item.series}</Text>
+            <SafeAreaView style={styles.container}>
+            <Text style={styles.text}>Frase:</Text>
+            <Text style={styles.textb}> {item.quote}</Text>
+            <Text style={styles.text}>Autor:</Text>
+            <Text style={styles.textb}> {item.author}</Text>
+            <Text style={styles.text}>Serie:</Text>
+            <Text style={styles.textb}> {item.series}</Text>
+            </SafeAreaView>
             </>
         );
         const renderItem = ({ item }) => {
@@ -50,13 +52,15 @@ export class InfoScreen extends Component {
         return(
             <>
             <View style={styles.container}>
-             
+            <Image source={require('../img/breakingbad2.jpg')} style={styles.mainImage}/>
+            <SafeAreaView style={styles.container}>  
             <Button
               onPress={this.handlerBtn.bind(this)}
               title="Buscar Frases Random "
               color="#006400"
               accessibilityLabel="Learn more about this purple button"
             />
+            </SafeAreaView> 
           </View>
           
           <SafeAreaView style={styles.container}>
@@ -84,4 +88,19 @@ const styles = StyleSheet.create({
       width: 200,
       height: 400,
     },
+    mainImage:{
+      width: 400,
+      height: 200,
+    },
+    text:{
+      color: "black",
+      fontSize: 15,
+      fontWeight: "bold",
+      textAlign:"center",
+    },
+    textb:{
+      color: "black",
+      fontSize: 15,
+      textAlign:"center",
+    }
   });
