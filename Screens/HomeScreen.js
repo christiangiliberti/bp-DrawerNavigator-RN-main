@@ -91,8 +91,8 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     tinyLogo: {
-      width: 200,
-      height: 400,
+      width: 400,
+      height: 500,
     },
         mainImage:{
       width: 400,
