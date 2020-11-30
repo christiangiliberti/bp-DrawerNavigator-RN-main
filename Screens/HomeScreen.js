@@ -39,7 +39,9 @@ export class HomeScreen extends Component {
             <Text style={styles.text}>Sobrenombre: {item.nickname}</Text>
             <Text style={styles.text}>Cumple: {item.birthday}</Text>
             <Text style={styles.text}>Estado: {item.status}</Text>
+            <SafeAreaView style={styles.container}>
             <Image style={styles.tinyLogo} source={{uri: item.img}}/>
+            </SafeAreaView>
             </>
         );
         const renderItem = ({ item }) => {
